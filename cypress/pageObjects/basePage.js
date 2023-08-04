@@ -1,0 +1,98 @@
+require('cypress-xpath');
+
+class BasePage {
+    basketButton() {
+        return cy.get("#shopping_cart_container");
+    }
+
+    tabsLocator(tabname) {
+        return cy.xpath(`//a[contains(.,"${tabname}")]`)
+    }
+
+    pageNamesLocator(pagename) {
+        return cy.xpath(`//p[contains(.,"${pagename}")]`)
+    }
+
+    plansRowLocator(date) {
+        return cy.get(`[data-testid="plans-row-${date}"]`)
+    }
+
+    submitShippingDetails(firstName, lastName, postalCode) {
+        // TODO split up into separate objects
+        cy.get("#first-name").type(firstName);
+        cy.get("#last-name").type(lastName);
+        cy.get("#postal-code").type(postalCode);
+        cy.get("#continue").click();
+    }
+
+
+    createschedule() {
+        return cy.xpath("//button[contains(.,'Create Schedule')]")
+    }
+
+
+    getButtonLocator(name) {
+        return cy.xpath(`//button[contains(.,'${name}')]`)
+    }
+
+    Addashift() {
+        return cy.xpath('//span[contains(., "Add a shift")]').eq(0)
+    }
+
+
+    getModalLocator(name) {
+        return cy.xpath(`//div[contains(@class,'modal-header')]//div[contains(.,'${name}')]`)
+    }
+
+
+    selectRoleLocator() {
+        return cy.get('[data-testid="Role input"]')
+    }
+
+    selectStartTimeLocator() {
+        return cy.get('[data-testid="Start Time input"]')
+    }
+
+    selectEndTimeLocator() {
+        return cy.get('[data-testid="End Time input"]')
+    }
+
+    selectEmployeeLocator() {
+        return cy.get('[data-testid="Employee input"]')
+    }
+
+    selectDateLocator() {
+        return cy.get('[data-testid="Date input"]')
+    }
+
+    selectShiftLocator(shift) {
+        return cy.get(`[data-testid="shift-break-${shift}"]`)
+    }
+
+
+    shiftCardLocator(employee, shift) {
+        return cy.xpath(`//div//button[contains(.,'${employee}')and contains (@data-testid,'shift-card-${shift}')]`)
+    }
+
+    deleteShiftButton() {
+        return cy.get('[data-testid="request-delete-shift"]')
+    }
+
+    deleteShiftButtonOnModal() {
+        return cy.get('[data-testid="confirm-submit-modal"]')
+    }
+
+    updateShiftButton() {
+        return cy.get('[data-testid="submit-button"]')
+    }
+
+    weeklyTotalHourLocator(hour, row) {
+        return cy.xpath(`//tr[contains(.,'${row}')]//td[contains(.,'${hour}')]`)
+    }
+
+    addShiftButton() {
+        return cy.get('[data-testid="submit-button"]')
+    }
+}
+
+module.exports = new BasePage;
