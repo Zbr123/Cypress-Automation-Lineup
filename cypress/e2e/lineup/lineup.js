@@ -113,7 +113,16 @@ Then("I should see weekly total {string} for row {string}", (hour, row) => {
     
 });
 
-And("I check 'Show all employees regardless of availability' checkbox", () => {
-    BasePage.employeeAvailabilityCheckBoxLocator().click();
+// And("I check 'Show all employees regardless of availability' checkbox", () => {
+//     BasePage.employeeAvailabilityCheckBoxLocator().click();
 
+// });
+
+When("I (check|uncheck) the checkbox", (action) => {
+    if (action === 'check') {
+        BasePage.employeeAvailabilityCheckBoxLocator().check().should('be.checked');
+    } else if (action === 'uncheck') {
+        BasePage.employeeAvailabilityCheckBoxLocator().uncheck().should('not.be.checked');
+    }
 });
+
