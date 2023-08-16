@@ -127,3 +127,14 @@ Feature: Weekly Planning
     When I click on "Delete Shift" button
     And I refresh page
     Then I "should not" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
+
+
+  Scenario: I want to see all employees regardless of their availability
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Planning" tab on the dashboard
+    Then I should see "Weekly Planning" page
+    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    And I click on Add a Shift
+    And I check 'Show all employees regardless of availability' checkbox
+

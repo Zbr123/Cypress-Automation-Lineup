@@ -110,4 +110,10 @@ Then("I click shift card with employee name {string} and shift time {string}", (
 
 Then("I should see weekly total {string} for row {string}", (hour, row) => {
     BasePage.weeklyTotalHourLocator(hour, row).should("be.visible");
+    
+});
+
+And("I check 'Show all employees regardless of availability' checkbox", () => {
+    BasePage.employeeAvailabilityCheckBoxLocator().click();
+
 });

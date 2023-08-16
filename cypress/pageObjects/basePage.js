@@ -93,6 +93,10 @@ class BasePage {
     addShiftButton() {
         return cy.get('[data-testid="submit-button"]')
     }
+
+    employeeAvailabilityCheckBoxLocator() {
+        return cy.get('[Show all employees regardless of availability]')
+    }
 }
 
 module.exports = new BasePage;
