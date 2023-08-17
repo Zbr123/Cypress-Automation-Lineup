@@ -135,6 +135,27 @@ Feature: Weekly Planning
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
     When I click on non submitted plan with date "Sep 4 - Sep 10"
+    And I click on "Create Schedule" button
+    And I click on "Start From Scratch" button
     And I click on Add a Shift
-    And I check 'Show all employees regardless of availability' checkbox
+    And I "check" the checkbox
+    And I click on Employee dropdown
+    Then I should see the following data on the employee dropdown:
+      | Employees |
+      | Emma      |
 
+
+      Scenario: I want to see only available employees
+      Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Planning" tab on the dashboard
+    Then I should see "Weekly Planning" page
+    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    And I click on "Create Schedule" button
+    And I click on "Start From Scratch" button
+    And I click on Add a Shift
+    And I "uncheck" the checkbox
+    And I click on Employee dropdown
+    Then I should see the following data on the employee dropdown:
+      | Employees |
+      | Emma      |

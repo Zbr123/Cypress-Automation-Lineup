@@ -1,4 +1,5 @@
 const {Given, When, Then, And} = require("cypress-cucumber-preprocessor/steps");
+require('cypress-real-events/support');
 
 const BasePage = require("../../pageObjects/basePage");
 const LoginPage = require("../../pageObjects/loginPage");
@@ -113,16 +114,28 @@ Then("I should see weekly total {string} for row {string}", (hour, row) => {
     
 });
 
-// And("I check 'Show all employees regardless of availability' checkbox", () => {
-//     BasePage.employeeAvailabilityCheckBoxLocator().click();
 
-// });
+And("I click on Employee dropdown", () => {
+    BasePage.selectEmployeeLocator().realClick();
+});
 
-When("I (check|uncheck) the checkbox", (action) => {
+
+
+When("I {string} the checkbox", (action) => {
     if (action === 'check') {
         BasePage.employeeAvailabilityCheckBoxLocator().check().should('be.checked');
     } else if (action === 'uncheck') {
         BasePage.employeeAvailabilityCheckBoxLocator().uncheck().should('not.be.checked');
     }
 });
+
+
+Then('I should see the following data on the employee dropdown:', (dataTable) => {
+    const expectedEmployees = dataTable.raw().slice(1).map(row => row[0]);
+        expectedEmployees.forEach(employee => {
+            BasePage.employeeNameLocator(employee).should('exist');
+    });
+});
+
+
 

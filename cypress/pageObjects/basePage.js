@@ -95,7 +95,15 @@ class BasePage {
     }
 
     employeeAvailabilityCheckBoxLocator() {
-        return cy.get('[Show all employees regardless of availability]')
+        return cy.get('[data-testid="Show all employees regardless of availability"]')
+    }
+
+    employeeNameLocator(employeeName) {
+        return cy.xpath(`//option[contains(.,'${employeeName}')]`);
+    }
+
+    clickDropdownLocator(){
+        return cy.get('div.form-group').eq(3)
     }
 }
 
