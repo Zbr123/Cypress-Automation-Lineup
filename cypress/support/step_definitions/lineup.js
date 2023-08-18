@@ -111,14 +111,13 @@ Then("I click shift card with employee name {string} and shift time {string}", (
 
 Then("I should see weekly total {string} for row {string}", (hour, row) => {
     BasePage.weeklyTotalHourLocator(hour, row).should("be.visible");
-    
+
 });
 
 
 And("I click on Employee dropdown", () => {
     BasePage.selectEmployeeLocator().realClick();
 });
-
 
 
 When("I {string} the checkbox", (action) => {
@@ -132,8 +131,8 @@ When("I {string} the checkbox", (action) => {
 
 Then('I should see the following data on the employee dropdown:', (dataTable) => {
     const expectedEmployees = dataTable.raw().slice(1).map(row => row[0]);
-        expectedEmployees.forEach(employee => {
-            BasePage.employeeNameLocator(employee).should('exist');
+    expectedEmployees.forEach(employee => {
+        BasePage.employeeNameLocator(employee).should('exist');
     });
 });
 

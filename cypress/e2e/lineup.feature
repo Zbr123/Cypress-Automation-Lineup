@@ -145,8 +145,8 @@ Feature: Weekly Planning
       | Emma      |
 
 
-      Scenario: I want to see only available employees
-      Given I login in to Lineup.ai
+  Scenario: I want to see only available employees
+    Given I login in to Lineup.ai
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
