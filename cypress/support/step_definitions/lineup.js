@@ -1,5 +1,6 @@
 const {Given, When, Then, And} = require("cypress-cucumber-preprocessor/steps");
-require('cypress-real-events/support');
+// const {DataTable, Given, Then, When} = require("@badeball/cypress-cucumber-preprocessor");
+// require('cypress-real-events/support');
 
 const BasePage = require("../../pageObjects/basePage");
 const LoginPage = require("../../pageObjects/loginPage");
@@ -115,9 +116,9 @@ Then("I should see weekly total {string} for row {string}", (hour, row) => {
 });
 
 
-And("I click on Employee dropdown", () => {
-    BasePage.selectEmployeeLocator().realClick();
-});
+// And("I click on Employee dropdown", () => {
+//     BasePage.selectEmployeeLocator().realClick();
+// });
 
 
 

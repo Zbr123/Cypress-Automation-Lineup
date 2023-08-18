@@ -2,7 +2,7 @@
   "name": "cypress-demo",
   "version": "1.0.0",
   "description": "Write an end-to-end test using <member-of-cupressacae> and <member-of-cucurbitaceae>",
-  "main": "index.js",
+  "main": "./plugins/index.js",
   "scripts": {
     "test": "npx cypress run --reporter mochawesome",
     "debug": "npx cypress open",
@@ -17,9 +17,9 @@
     "mochawesome": "^7.0.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/e2e/lineup",
-    "testFiles": "**/*.js"
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step_definitions",
+    "testFiles":  "**/*.{feature,features}"
   },
   "dependencies": {
     "acorn": "^7.4.1",

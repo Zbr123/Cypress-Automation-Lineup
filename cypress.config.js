@@ -11,9 +11,8 @@ module.exports = defineConfig({
                 resolveStepDefinition(definition) {
                     return definition;
                 },
-                featureName: "___GLOBAL_EXECUTION___",
-                nonGlobalStepDefinitions: true,
-                stepDefinitions: 'cypress/e2e/lineup'
+                nonGlobalStepDefinitions: false,
+                stepDefinitions: 'cypress/support/step_definitions',
             }));
         }
     }
