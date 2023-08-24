@@ -1,6 +1,6 @@
 require('cypress-xpath');
 
-class BasePage {
+class SchedulingPage {
     basketButton() {
         return cy.get("#shopping_cart_container");
     }
@@ -25,17 +25,11 @@ class BasePage {
         cy.get("#continue").click();
     }
 
-
-    createschedule() {
-        return cy.xpath("//button[contains(.,'Create Schedule')]")
-    }
-
-
     getButtonLocator(name) {
         return cy.xpath(`//button[contains(.,'${name}')]`)
     }
 
-    Addashift() {
+    addAShift() {
         return cy.xpath('//span[contains(., "Add a shift")]').eq(0)
     }
 
@@ -102,9 +96,9 @@ class BasePage {
         return cy.xpath(`//option[contains(.,'${employeeName}')]`);
     }
 
-    clickDropdownLocator(){
+    clickDropdownLocator() {
         return cy.get('div.form-group').eq(3)
     }
 }
 
-module.exports = new BasePage;
+module.exports = new SchedulingPage;
