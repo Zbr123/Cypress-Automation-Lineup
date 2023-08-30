@@ -25,6 +25,17 @@ class TrackingPage {
     weatherLocator(value) {
         return cy.xpath(`//div[contains(@data-testid,"Today's Progress")]//div//div//div//div//div[contains (.,'${value}')]`)
     }
+
+    breakdownlocator() {
+        return cy.get('[data-testid="Breakdown"]');
+    }
+  
+    LastweekRecap() {
+        // return cy.get('[data-testid="Yesterday Recap"]');
+        return cy.get('[data-testid="Yesterday\'s Recap"]')
+
+    }
+    
 }
 
 module.exports = new TrackingPage;
