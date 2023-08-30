@@ -26,7 +26,7 @@ class SchedulingPage {
     }
 
     getButtonLocator(name) {
-        return cy.xpath(`//button[contains(.,'${name}')]`)
+        return cy.xpath(`//button[contains(.,'${name}')]`).eq(0);
     }
 
     addAShift() {

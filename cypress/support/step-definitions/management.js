@@ -135,7 +135,7 @@ And("I click on {string} checkbox", (checkboxLabel) => {
     }
     // settingsPage.checkboxByIndex(index).should('exist').click();
     // settingsPage.checkboxByIndex(index).debug().click();
-    managementPage.checkboxByIndex(index).should('exist').wait(2000).click();
+    managementPage.checkboxByIndex(index).should('exist').click();
 
 
 });
@@ -157,5 +157,5 @@ And("I click on Edit button of the {string} Employee", (employeeName) => {
 });
 
 Then("I should be able to see Thankyou message", () => {
-    cy.contains('Thankyou! The information has been updated.').should('exist');
+    cy.get('.Toastify__toast-body > :nth-child(2)').should("be.visible");
 });

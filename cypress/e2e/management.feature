@@ -44,10 +44,12 @@ Feature: Management
     Then I should see Today's Progress Page
     When I click on "Management" tab on the dashboard
     And I click on "Employees" under Management heading
-    And I type "Test2" in the search bar on the Employee Page
-    And I click on Edit button of the "Test2" Employee
+    And I type "Test1120" in the search bar on the Employee Page
+    And I wait "5" seconds
+    And I click on Edit button of the "Test1120" Employee
     And I click on "Active" checkbox
     And I click on "Update" button
+    And I wait "1" seconds
     Then I should be able to see Thankyou message
 
   Scenario: I want to create a new Employee with Exclude Labour
@@ -122,7 +124,7 @@ Feature: Management
       | sender      |
       | Lineup Demo |
 
-  Scenario: I want to see following Sender on Messages Page
+  Scenario: I want to see following Message on Messages Page
     Given I login in to Lineup.ai
     Then I should see Today's Progress Page
     When I click on "Management" tab on the dashboard
