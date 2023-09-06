@@ -35,3 +35,11 @@ And("I refresh page", () => {
 And("I wait {string} seconds", (time) => {
     cy.wait(time * 1000);
 });
+
+Then('I should see {string} heading on Login Page', (text) => {
+CommonLocators.heading(text).should("be.visible");
+});
+
+When('I click on the profile dropdown button', () => {
+    CommonLocators.dropdown().click();
+});
