@@ -12,6 +12,13 @@ Given("I login in to Lineup.ai", () => {
     });
 });
 
+Given("I login in to Lineup.ai for Reporting", () => {
+    cy.visit("https://staging.lineup.ai");
+    cy.fixture("user").then((user) => {
+        LoginPage.login(user.username1, user.password1);
+    });
+});
+
 Then("I should see {string} success message on the page", (text) => {
     CommonLocators.successMessage(text).should('exist');
 });

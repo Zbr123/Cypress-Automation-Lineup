@@ -159,3 +159,15 @@ And("I click on Edit button of the {string} Employee", (employeeName) => {
 Then("I should be able to see Thankyou message", () => {
     cy.get('.Toastify__toast-body > :nth-child(2)').should("be.visible");
 });
+
+Then("I should see the {string} on the Employee Page", (employeeName) => {
+    managementPage.employeeName(employeeName).should("be.visible");
+});
+
+And("I clear the text on the search bar on the Employee Page", () => {
+    managementPage.employeeSearch().clear();
+});
+
+Then("I should see {string} heading on the Edit Employee Page", (heading) => {
+    managementPage.editEmployeeSubheading(heading).should("be.visible");
+});

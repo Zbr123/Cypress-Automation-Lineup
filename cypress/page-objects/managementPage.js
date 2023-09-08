@@ -77,14 +77,8 @@ class ManagementPage {
 
 
     checkboxByIndex(index) {
-        //return cy.get('input[type="checkbox"]').eq(index);
         return cy.xpath('//td[contains(@class, "sc-iBTzgk hpDgQP")]//input[@type="checkbox"]').eq(index);
     }
-
-//   checkboxByIndex(index){
-//     return cy.xpath('//td[contains(@class, "sc-iBTzgk hpDgQP")]//input[@type="checkbox"]').eq(index);
-// }
-
 
     emailError() {
         return cy.get('[data-testid="Email Address* input-error"]');
@@ -96,6 +90,14 @@ class ManagementPage {
 
     employeeSearch() {
         return cy.get(`input[placeholder='Search']`);
+    }
+    
+    employeeName(employeeName) {
+        return cy.xpath(`//td[contains(.,'${employeeName}')]`).eq(0);
+    }
+
+    editEmployeeSubheading(heading) {
+        return cy.xpath(`//p[contains(.,'${heading}')]`).eq(0);
     }
 }
 

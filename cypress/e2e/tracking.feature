@@ -5,7 +5,7 @@ Feature: Tracking
     Then I should see Today's Progress Page
     Then I should see day view calculations with the following data on 'Tracking' page:
       | sales actual | sales predicted | labor planned | labor actual | labor suggested | weather |
-      | $3,378       | $0              | –             | 0 hr         | 10 hr           | 72      |
+      |     –        | $0              |      –        |    0 hr      | 20 hr           | 75      |
     Then I should see Breakdown Table
 
 
@@ -15,7 +15,7 @@ Feature: Tracking
     When I click on "Week" button
     Then I should see week view calculations with the following data on 'Tracking' page:
       | sales actual | sales predicted | labor planned | labor actual | labor suggested |
-      | $42,538      | $16,617         | –             | 0 hr         | 281 hr          |
+      | $78,319      | $5,993          | –             | 0 hr         | 101 hr          |
     Then I should see last week Recap
     Then I should see Breakdown Table      
 

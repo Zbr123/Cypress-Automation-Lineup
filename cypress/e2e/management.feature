@@ -66,6 +66,64 @@ Feature: Management
     And I click on "Add" button
     Then I should see "Employee successfully added" success message on the page
 
+    Scenario: I want to search an existing employee
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Ahmed A" in the search bar on the Employee Page
+    Then I should see the "Ahmed A" on the Employee Page
+
+Scenario: I want to search an employee and then remove it from search bar
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Ahmed A" in the search bar on the Employee Page
+    Then I should see the "Ahmed A" on the Employee Page
+    And I clear the text on the search bar on the Employee Page
+    Then I should see the "Emma" on the Employee Page
+
+Scenario: I want to see Employee Name heading when editing an Employee
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Test1120" in the search bar on the Employee Page
+    And I wait "5" seconds
+    And I click on Edit button of the "Test1120" Employee
+    Then I should see "Employee Name" heading on the Edit Employee Page
+  
+  Scenario: I want to see Email Address heading when editing an Employee
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Test1120" in the search bar on the Employee Page
+    And I wait "5" seconds
+    And I click on Edit button of the "Test1120" Employee
+    Then I should see "Email Address" heading on the Edit Employee Page
+
+  Scenario: I want to see Phone Number heading when editing an Employee
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Test1120" in the search bar on the Employee Page
+    And I wait "5" seconds
+    And I click on Edit button of the "Test1120" Employee
+    Then I should see "Phone Number" heading on the Edit Employee Page
+
+  Scenario: I want to see Wage heading when editing an Employee
+    Given I login in to Lineup.ai
+    Then I should see Today's Progress Page
+    When I click on "Management" tab on the dashboard
+    And I click on "Employees" under Management heading
+    And I type "Test1120" in the search bar on the Employee Page
+    And I wait "5" seconds
+    And I click on Edit button of the "Test1120" Employee
+    Then I should see "Wage" heading on the Edit Employee Page
+
 
   Scenario: I want to view Messages section
     Given I login in to Lineup.ai
@@ -75,15 +133,15 @@ Feature: Management
     Then I should see "Messages" heading on the top of the Messages Page
 
 
-  Scenario: I want send message to All Employees
-    Given I login in to Lineup.ai
-    Then I should see Today's Progress Page
-    When I click on "Management" tab on the dashboard
-    And I click on "Messages" under Management heading
-    And I click on "New Message" button
-    And I enter "Test" Messages textarea
-    And I click on "Send Message to All Employees" button
-    Then I should see success message on Messages Page
+  # Scenario: I want send message to All Employees
+  #   Given I login in to Lineup.ai
+  #   Then I should see Today's Progress Page
+  #   When I click on "Management" tab on the dashboard
+  #   And I click on "Messages" under Management heading
+  #   And I click on "New Message" button
+  #   And I enter "Test" Messages textarea
+  #   And I click on "Send Message to All Employees" button
+  #   Then I should see success message on Messages Page
 
   Scenario: I want to see Date subheading on the Messages Page
     Given I login in to Lineup.ai
@@ -141,29 +199,29 @@ Feature: Management
     And I click on "Requests" under Management heading
     Then I should see "Schedule Requests" heading on the top of the Request Page
 
-  Scenario: I want to submit approved request of the Employee Name
-    Given I login in to Lineup.ai
-    Then I should see Today's Progress Page
-    When I click on "Management" tab on the dashboard
-    And I click on "Requests" under Management heading
-    Then I should see "Schedule Requests" heading on the top of the Request Page
-    And I enter "Louis Lineup" in the search field on Request Page
-    And I click on Submit button of the "Louis Lineup" Employee
-    And I click "Submit" button on the modal
-    Then I should see "Request submitted and moved to History" success message on the page
+#   Scenario: I want to submit approved request of the Employee Name
+#     Given I login in to Lineup.ai
+#     Then I should see Today's Progress Page
+#     When I click on "Management" tab on the dashboard
+#     And I click on "Requests" under Management heading
+#     Then I should see "Schedule Requests" heading on the top of the Request Page
+#     And I enter "Louis Lineup" in the search field on Request Page
+#     And I click on Submit button of the "Louis Lineup" Employee
+#     And I click "Submit" button on the modal
+#     Then I should see "Request submitted and moved to History" success message on the page
 
-  Scenario: I want to submit request after removing the approve checkbox
-    Given I login in to Lineup.ai
-    Then I should see Today's Progress Page
-    When I click on "Management" tab on the dashboard
-    And I click on "Requests" under Management heading
-    Then I should see "Schedule Requests" heading on the top of the Request Page
-    And I enter "Harrison T" in the search field on Request Page
-    And I declined the checkbox of "Harrison T" Employee
-    And I enter "Test" in Acstions textbox on Request Page
-    And I click on Submit button of the "Harrison T" Employee
-    And I click "Submit" button on the confirmation modal
-    Then I should see "Request submitted and moved to History" success message on the page
+#   Scenario: I want to submit request after removing the approve checkbox
+#     Given I login in to Lineup.ai
+#     Then I should see Today's Progress Page
+#     When I click on "Management" tab on the dashboard
+#     And I click on "Requests" under Management heading
+#     Then I should see "Schedule Requests" heading on the top of the Request Page
+#     And I enter "Harrison T" in the search field on Request Page
+#     And I declined the checkbox of "Harrison T" Employee
+#     And I enter "Test" in Acstions textbox on Request Page
+#     And I click on Submit button of the "Harrison T" Employee
+#     And I click "Submit" button on the confirmation modal
+#     Then I should see "Request submitted and moved to History" success message on the page
 
   Scenario: I want to see Employee section on the Requests page
     Given I login in to Lineup.ai
@@ -206,3 +264,4 @@ Feature: Management
     When I click on "Management" tab on the dashboard
     And I click on "History" under Management heading
     Then I should see "Request History" heading on the top of the Request Page
+

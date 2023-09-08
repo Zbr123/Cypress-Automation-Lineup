@@ -5,14 +5,14 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
     Then I should see "Add a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role  | start time | end time | employee  | date       | shift break |
-      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Sep 4 | 20          |
+      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Oct 2 | 20          |
     And I click on Add button
     Then I "should" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     When I click shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
@@ -29,14 +29,14 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
     Then I should see "Add a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role  | start time | end time | employee  | date       | shift break |
-      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Sep 4 | 20          |
+      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Oct 2 | 20          |
     And I click on Add button
     Then I "should" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     When I click shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
@@ -53,21 +53,21 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
     Then I should see "Add a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role  | start time | end time | employee  | date       | shift break |
-      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Sep 4 | 20          |
+      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Oct 2 | 20          |
     And I click on Add button
     Then I "should" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     When I click shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     Then I should see "Update a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role | start time | end time | employee  | date        | shift break |
-      | Prep | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Aug 14 | 20          |
+      | Prep | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Oct 2  | 20          |
     And I click on "Update" button
     Then I "should" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     When I click shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
@@ -84,22 +84,22 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
     Then I should see "Add a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role  | start time | end time | employee | date        | shift break |
-      | Grill | 10:30 AM   | 12:30 PM | ZUB      | Mon, Aug 14 | 0           |
+      | Grill | 10:30 AM   | 12:30 PM |  Test 3  | Mon, Oct 2  | 0           |
     And I click on Add button
-    Then I "should" see shift card with employee name "ZUB" and shift time "10:30am-12:30pm"
+    Then I "should" see shift card with employee name "Test 3" and shift time "10:30am-12:30pm"
     Then I should see weekly total "2 hrs" for row "Grill"
-    When I click shift card with employee name "ZUB" and shift time "10:30am-12:30pm"
+    When I click shift card with employee name "Test 3" and shift time "10:30am-12:30pm"
     Then I should see "Update a Shift" modal
     When I fill in 'Add a Shift' modal with the following data:
       | role  | start time | end time | employee  | date        | shift break |
-      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Aug 14 | 20          |
+      | Grill | 10:30 AM   | 12:30 PM | zubair 12 | Mon, Oct 2  | 20          |
     And I click on "Update" button
     Then I "should" see shift card with employee name "zubair 12" and shift time "10:30am-12:30pm"
     Then I should see weekly total "1.7 hrs" for row "Grill"
@@ -117,7 +117,7 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
@@ -133,7 +133,7 @@ Feature: Scheduling
     Then I should see Today's Progress Page
     When I click on "Planning" tab on the dashboard
     Then I should see "Weekly Planning" page
-    When I click on non submitted plan with date "Sep 4 - Sep 10"
+    When I click on non submitted plan with date "Oct 2 - Oct 8"
     And I click on "Create Schedule" button
     And I click on "Start From Scratch" button
     And I click on Add a Shift
