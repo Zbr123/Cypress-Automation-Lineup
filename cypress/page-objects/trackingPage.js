@@ -31,7 +31,6 @@ class TrackingPage {
     }
   
     LastweekRecap() {
-        // return cy.get('[data-testid="Yesterday Recap"]');
         return cy.get('[data-testid="Yesterday\'s Recap"]')
 
     }

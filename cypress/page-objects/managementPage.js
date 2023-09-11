@@ -31,7 +31,7 @@ class ManagementPage {
     }
 
     submitButton(employeeName) {
-        return cy.xpath(`//tr[contains(.,'${employeeName}')]//button[contains(.,'Submit')]`).eq(0);
+        return cy.xpath(`//tr[contains(.,"${employeeName}")]//button[contains(.,'Submit')]`).eq(0);
     }
 
     modalButton() {
@@ -39,7 +39,7 @@ class ManagementPage {
     }
 
     approveCheckbox(employeeName) {
-        return cy.xpath(`//tr[contains(.,'${employeeName}')]//label[contains(.,'Approve')]`).eq(0);
+        return cy.xpath(`//tr[contains(.,"${employeeName}")]//label[contains(.,'Approve')]`).eq(0);
     }
 
     actionTextbox() {

@@ -84,7 +84,6 @@ And("I enter {string} in Employee Name Field", (text) => {
     const randomFourDigitNumber = Math.floor(10 + Math.random() * 9000);
     const combinedText = text + randomFourDigitNumber;
     managementPage.employeeNameField().type(combinedText);
-    // settingsPage.employeeNameField().type(text);
 });
 
 And("I enter {string} in Employee Email Field", (text) => {
@@ -107,20 +106,9 @@ And("I enter {string} in Employee Phone No Field", (text) => {
     const randomFourDigitNumber = Math.floor(1000 + Math.random() * 9000);
     const combinedText = text + randomFourDigitNumber;
     managementPage.employeePhoneNoField().type(combinedText);
-    // settingsPage.employeePhoneNoField().type(text);
 });
 
-// And("I click on {string} checkbox", (checkboxLabel) => {
-//     if (checkboxLabel === "Exclude Labour") {
-//         settingsPage.firstCheckbox().click();
-//     }
-//     else if (checkboxLabel === "Active") {
-//         settingsPage.secondCheckbox().click();
-//     }
-//     else {
-//         throw new Error(`Unknown checkbox label: ${checkboxLabel}`);
-//     }
-// });
+
 
 
 And("I click on {string} checkbox", (checkboxLabel) => {
@@ -133,8 +121,6 @@ And("I click on {string} checkbox", (checkboxLabel) => {
     } else {
         throw new Error(`Unknown checkbox label: ${checkboxLabel}`);
     }
-    // settingsPage.checkboxByIndex(index).should('exist').click();
-    // settingsPage.checkboxByIndex(index).debug().click();
     managementPage.checkboxByIndex(index).should('exist').click();
 
 

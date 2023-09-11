@@ -16,12 +16,12 @@ Feature: Login
     When I enter email "bad@test.com" and password "bad"
     Then I should see "incorrect email or password" error
 
-  Scenario: I should see 'Incorrect email and password' error if wrong email is entered and password is correct
+  Scenario: I should see 'Incorrect email and password' error if wrong email and correct password is entered
     Given I visit lineup.ai
-    When I enter email "bad@test.com" and password "Lineup2023!"
+    When I enter email "bad@test.com" and password "FEEG9whig8togh*zo"
     Then I should see "incorrect email or password" error
 
-  Scenario: I should see 'Incorrect email and password' error if email is correct and wrong password is entered
+  Scenario: I should see 'Incorrect email and password' error if correct email and wrong password is entered
     Given I visit lineup.ai
     When I enter email "demo@lineup.ai" and password "ba8ytr"
     Then I should see "incorrect email or password" error
