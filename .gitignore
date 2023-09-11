@@ -3,4 +3,5 @@
 debug/
 *.bak
 *.js
-*.ts
+*.ts 
+*.d.ts
