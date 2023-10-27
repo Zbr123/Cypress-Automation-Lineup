@@ -22,8 +22,8 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-       uses: cypress-io/github-action@v2
-        with:
-          start: npm run test-no-report
-          install: true
-          browser: chrome
+      uses: cypress-io/github-action@v2
+      with:
+        start: npm run test-no-report
+        install: true
+        browser: chrome
