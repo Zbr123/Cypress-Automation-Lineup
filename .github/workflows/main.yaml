@@ -22,12 +22,8 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-      uses: cypress-io/github-action@v4
+       uses: cypress-io/github-action@v2
         with:
-          install: false
           start: npm run test-no-report
+          install: true
           browser: chrome
-          record: true
-          parallel: true
-          group: 'E2E - Chrome'
-          config: videosFolder=/tmp/cypress-videos 
