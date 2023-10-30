@@ -26,5 +26,4 @@ jobs:
       with:
         config-file: cypress.config.js
         start: npm run test-no-report
-        install: true
         browser: chrome
