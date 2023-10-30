@@ -21,10 +21,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run Cypress tests
-      uses: cypress-io/github-action@v5
+    - name: Run Cypress test
+      uses: cypress-io/github-action@v4
       with:
         config-file: cypress.config.js
         start: npm run test-no-report
-        install: true
-        browser: chrome
+        install: false
+        browser: firefox
