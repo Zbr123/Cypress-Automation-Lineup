@@ -7,7 +7,7 @@ on:
 
 jobs:
   cypress:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run Cypress test
-      uses: cypress-io/github-action@v4
+      uses: cypress-io/github-action@v6
       with:
         config-file: cypress.config.js
         start: npm run test-no-report
