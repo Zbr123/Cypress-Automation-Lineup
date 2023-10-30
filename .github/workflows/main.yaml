@@ -22,8 +22,9 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-      uses: cypress-io/github-action@v2
+      uses: cypress-io/github-action@v5
       with:
         config-file: cypress.config.js
         start: npm run test-no-report
+        install: true
         browser: chrome
