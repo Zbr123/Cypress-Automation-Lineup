@@ -26,5 +26,5 @@ jobs:
       with:
         config-file: cypress.config.js
         start: npm run test-no-report
-        install: false
+        install: true
         browser: firefox
