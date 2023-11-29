@@ -22,16 +22,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run Cypress test with fe_url
-      uses: cypress-io/github-action@v6
-      if: github.event.inputs.fe_url != null && github.event.inputs.fe_url != ''
-      with:
-        config-file: cypress.config.js
-        start: npx cypress run --config baseUrl=${{ github.event.inputs.fe_url }}  --reporter mochawesome
-        install: true
-        browser: firefox
-
-    - name: Run Cypress test with default URL
+    - name: Run Cypress test with Staging URL
       uses: cypress-io/github-action@v6
       if: github.event.inputs.fe_url == null && github.event.inputs.fe_url == ''
       with:
@@ -39,8 +30,6 @@ jobs:
         start: npm run test-no-report
         install: true
         browser: firefox
-
-
 
     - name: Upload Screenshots
       uses: actions/upload-artifact@v2
