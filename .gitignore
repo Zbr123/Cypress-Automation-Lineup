@@ -1,7 +1,1 @@
-*.log
-/tmp/
-debug/
-*.bak
-*.js
-*.ts 
-*.d.ts
+node_modules/
