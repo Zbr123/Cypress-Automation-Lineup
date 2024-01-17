@@ -23,7 +23,6 @@ Feature: Management
     And I click on "Add" button
     Then I should see "Employee successfully added" success message on the page
 
-
   Scenario: I should be able to see Email error when adding an existing email
     Given I login in to Lineup.ai
     Then I should see Today's Progress Page
@@ -37,7 +36,6 @@ Feature: Management
     And I click on "Active" checkbox
     And I click on "Add" button
     Then I should be able to see Email already exist
-
 
   Scenario: I want to edit an Employee
     Given I login in to Lineup.ai
@@ -124,14 +122,12 @@ Scenario: I want to see Employee Name heading when editing an Employee
     And I click on Edit button of the "Test1120" Employee
     Then I should see "Wage" heading on the Edit Employee Page
 
-
   Scenario: I want to view Messages section
     Given I login in to Lineup.ai
     Then I should see Today's Progress Page
     When I click on "Management" tab on the dashboard
     And I click on "Messages" under Management heading
     Then I should see "Messages" heading on the top of the Messages Page
-
 
   # Scenario: I want send message to All Employees
   #   Given I login in to Lineup.ai
@@ -190,7 +186,6 @@ Scenario: I want to see Employee Name heading when editing an Employee
     Then I should see the following message on the Messages:
       | message |
       | Test    |
-
 
   Scenario: I want to see Schedule Requests Heading
     Given I login in to Lineup.ai
@@ -264,4 +259,3 @@ Scenario: I want to see Employee Name heading when editing an Employee
     When I click on "Management" tab on the dashboard
     And I click on "History" under Management heading
     Then I should see "Request History" heading on the top of the Request Page
-
