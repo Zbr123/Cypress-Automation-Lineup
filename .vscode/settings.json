@@ -1,12 +1,11 @@
-{ 
+{
     "cucumberautocomplete.gherkinDefinitionPart": "(Given|And|When|Then|Step)\\(",
     "cucumberautocomplete.smartSnippets": true,
     "cucumberautocomplete.strictGherkinValidation": true,
     "cucumberautocomplete.onTypeFormat": true,
     "cucumberautocomplete.syncfeatures": true,
     "cucumberautocomplete.steps": [
-        "./cypress/support/step-definitions/*.js",
-        // "./cypress/e2e/**/*.js",
+        "./cypress/support/step_definitions/**/*.js",
     ],
     "cucumberautocomplete.strictGherkinCompletion": true,
     "files.watcherExclude": {
