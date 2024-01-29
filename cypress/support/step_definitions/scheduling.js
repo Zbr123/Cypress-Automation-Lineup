@@ -48,8 +48,8 @@ And("I fill in 'Add a Shift' modal with the following data:", (dataTable) => {
     if (data.hasOwnProperty('Start Time')) {
         SchedulingPage.selectStartTimeLocator().click();
         cy.contains(data['Start Time']).click()
-
     }
+    
     if (data.hasOwnProperty('End Time')) {
         SchedulingPage.selectEndTimeLocator().click();
         cy.contains(data['End Time']).click()
