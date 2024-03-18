@@ -4,16 +4,14 @@ const CommonLocators = require("../../page-objects/commonLocator");
 const LoginPage = require("../../page-objects/loginPage");
 
 Given("I login in to Lineup.ai", () => {
-    // cy.visit("https://staging.lineup.ai");
-    cy.visit("https://lineup-backend-1922-web.ci.lineup.ai/");
+    cy.visit("https://lineup-backend-2025-web.ci.lineup.ai/");
     cy.fixture("user").then((user) => {
         LoginPage.login(user.username, user.password);
     });
 });
 
 Given("I login in to Lineup.ai for Reporting", () => {
-    // cy.visit("https://staging.lineup.ai");
-    cy.visit("https://lineup-backend-1922-web.ci.lineup.ai/");
+    cy.visit("https://lineup-backend-2025-web.ci.lineup.ai/");
 
     cy.fixture("user").then((user) => {
         LoginPage.login(user.username1, user.password1);

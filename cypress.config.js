@@ -3,7 +3,7 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
 module.exports = defineConfig({
     e2e: {
         // baseUrl: 'https://staging.lineup.ai',
-        baseUrl: 'https://lineup-backend-1922-web.ci.lineup.ai/',
+        baseUrl: 'https://lineup-backend-2025-web.ci.lineup.ai/',
         specPattern: 'cypress/e2e/**/*.feature', // Update the specPattern to match your feature file location
         defaultCommandTimeout: 35000,
         setupNodeEvents(on, config) {
