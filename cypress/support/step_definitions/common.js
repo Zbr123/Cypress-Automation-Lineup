@@ -27,7 +27,10 @@ Then("I should see Today's Progress Page", () => {
 });
 
 Given("I visit lineup.ai", () => {
-    cy.visit("https://lineup-backend-1922-web.ci.lineup.ai/");
+    cy.visit("https://lineup-backend-1957-web.ci.lineup.ai/");
+    cy.fixture("user").then((user) => {
+        LoginPage.login(user.username, user.password);
+    });
 });
 
 And("I enter email {string} and password {string}", (email, password) => {
